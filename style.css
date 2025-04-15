@@ -1,0 +1,314 @@
+/*********************** CSS RESET ***********************/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*********************** GENERIC ELEMENTS ***********************/
+body {
+    background-color:#5a2b29;
+    font-family:Agdasima,Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 200vh;
+}
+
+/*********************** INTRO ***********************/
+
+.intro{
+    background-image: url(images/illustration1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw; /* viewport width */
+    height: 100vh; /* viewport height */
+    width: auto;
+    display: flex;
+
+    /*helps put the intro screen infront of the nav bar*/
+    position: relative;
+    z-index: 1010;
+}
+
+.intro-container{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    /*properties are X, Y, size and colour*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+}
+
+.intro h1{
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.intro p{
+    line-height: 2;
+}
+
+/*********************** CARD ***********************/
+.card{
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.card-image{
+    height: 500px;
+    overflow: hidden; /* crops extra content */
+}
+
+.card-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.card h2{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 1.2em; /* 120% of the font size */
+}
+
+.card:hover img{
+    transform: scale(1.2);
+    transition-duration: 10s;
+    transition-timing-function: linear;
+}
+/*****CONTAINER*****/
+.container{
+    max-width: 1280px;
+    margin: auto;
+}
+/*** GRID LAYOUT ***/ 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 50px;
+}
+.two-columns .card{
+    width: calc((100% - 50px) / 2);
+}
+.three-columns .card{
+    width: calc((100% - 100px) / 3);
+}
+
+/*** WEBSITE CONTENT ***/
+.main-content{
+    margin-top: 100px;
+}
+
+.vertical-title{
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    transform: rotate(90deg) translateY(5px);
+    transform-origin: 0 0;
+    position: absolute;
+}
+
+/*** FOOTER ***/
+.website-footer{
+    background-color: #331817;
+    padding: 50px;
+}
+
+.website-footer .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.website-footer .summary {
+width: 33%;
+}
+
+.website-footer .footer-links{
+    margin-left: auto;
+    list-style: none;
+    columns: 2;
+    gap: 50px;
+}
+
+.website-footer .footer-item{
+    margin-bottom: 10px;
+}
+
+.website-footer .footer-link{
+    color: #837474;
+    text-decoration: none;
+}
+
+.website-footer .copyright{
+    width: 100%;
+    margin-top: 50px;
+    text-align: right;
+}
+
+/*** NAV BAR ***/
+.navbar{
+   background-color: #331817;
+    border-color: rgb(26, 2, 2);
+    border-style: solid;
+    border-width: 0;
+
+    /*overrides the cleared borders*/
+
+    border-bottom-width: 1px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    z-index: 1000;
+}
+.navbar .container{
+    display: flex;
+}
+
+.navbar a{
+    /*this will add padding to the elements later*/
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+.navbar-nav{
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-link{
+    /*padding: top/bottom left/right*/
+    padding: 30px 20px;
+}
+.navbar-brand{
+    font-family: Teko, Georgia, 'Times New Roman', Times, serif;
+    /*scale to 150% of original font size*/
+    font-size: 1.5em;
+    font-weight: bold;
+    align-content: center;
+}
+
+.copyright{
+    display: block;
+    color: #837474;
+    text-decoration: none;
+}
+
+.summary{
+    display: flex;
+    color: #837474;
+    text-decoration: none;
+}
+
+.vertical-title{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact{
+    display: block;
+    color: #837474;
+    list-style-type: none;
+}
+
+
+/*all art webpage */
+
+
+
+  
+  /* Box Layout for Image Columns */
+  .container .box {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: space-between;
+    width: 100%;
+    margin: -10px; /* Adjust for added margins on children */
+  }
+  
+  /* Dream Section Styling for Individual Columns */
+  .container .box .dream {
+    flex: 1 1 calc(33.33% - 20px); /* 3 columns layout with equal margins */
+    margin: 10px; /* Equal margin on all sides */
+  }
+  
+  /* Image Styling */
+  .container .box .dream img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Margin below each image */
+    transition: transform 0.8s, filter 0.8s; /* Smooth transition for the effect */
+  }
+  
+  /* Hover effect for images */
+  .container .box .dream img:hover {
+    filter: grayscale(1);             /* Convert image to grayscale */
+    transform: scale(1.01);           /* Slightly enlarge the image */
+  }
+  
+  /* Button Styling */
+  .container .btn {
+    margin: 40px 0 70px 0;
+    background: #222;
+    padding: 15px 40px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 3px;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablets (2 columns) */
+  @media only screen and (max-width: 1024px) {
+    .container .box .dream {
+      flex: 1 1 calc(50% - 20px); /* Adjust to 2 columns with equal margins */
+    }
+  
+    .container .heading {
+      width: 100%; /* Full-width heading on smaller screens */
+    }
+    
+    .container .heading h3 {
+      font-size: 2.2em; /* Adjust heading size for tablets */
+    }
+  }
+  
+  /* Mobile (1 column) */
+  @media only screen and (max-width: 640px) {
+    .container .box {
+      flex-direction: column; /* Stack columns vertically */
+      margin: 0; /* Reset container margin for single column */
+    }
+  
+    .container .box .dream {
+      flex: 1 1 100%; /* Full width for single column */
+      margin: 10px 0; /* Vertical margin only */
+    }
+  
+    .container .heading {
+      width: 100%; /* Full-width heading */
+    }
+    
+    .container .heading h3 {
+      font-size: 1.7em; /* Adjust heading size for mobile */
+    }
+  }
