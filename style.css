@@ -312,3 +312,30 @@ width: 33%;
       font-size: 1.7em; /* Adjust heading size for mobile */
     }
   }
+
+  /* About me */ 
+ .main-content{
+    color: #fff;
+ }
+
+ .container .box2 {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: space-between;
+    width: 100%;
+    margin: -10px; /* Adjust for added margins on children */
+  }
+  
+  /* Dream Section Styling for Individual Columns */
+  .container .box2 .dream2 {
+    flex: 1 1 calc(33.33% - 20px); /* 3 columns layout with equal margins */
+    margin: 10px; /* Equal margin on all sides */
+  }
+  
+  /* Image Styling */
+  .container .box2 .dream2 img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Margin below each image */
+    transition: transform 0.8s, filter 0.8s; /* Smooth transition for the effect */
+  }
